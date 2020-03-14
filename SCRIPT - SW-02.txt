@@ -1,0 +1,50 @@
+enable
+config t
+hostname SW-02
+username lukasrocha privilege 15 secret LUKAS*console
+line vty 0 15
+login local
+line console 0
+login local
+exit
+service password-encryption
+enable secret LUKAS*enable
+line console 0
+password LUKAS*console
+login local
+exit
+banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS"
+ip domain-name 1rede.local
+crypto key generate rsa general-key modulus 1024
+line vty 0 15
+transport input ssh
+password LUKAS*vty
+login
+exit
+interface vlan 1
+ip address 172.16.255.254 255.255.0.0
+no shut down
+exit
+ip default-gateway 172.16.0.1
+end
+conf t
+username Danilo privilege 15 secret Danilo*console
+line vty 0 15
+login local
+line console 0
+login local
+exit
+service password-encryption
+enable secret Danilo*enable
+line console 0
+password Danilo*console
+login local
+exit
+crypto key generate rsa general-key modulus 1024
+line vty 0 15
+transport input ssh
+password Danilo*vty
+login
+exit
+end
+wr

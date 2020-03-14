@@ -1,0 +1,12 @@
+﻿PC-02
+
+
+________________
+
+
+
+
+* IP: 172.16.0.10
+* MÁSCARA: 255.255.0.0
+* GATEWAY: 172.16.0.1
+* MUDAR O NOME DO PC NA TOPOLOGIA

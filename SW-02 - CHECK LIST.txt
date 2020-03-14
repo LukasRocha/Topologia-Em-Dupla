@@ -1,0 +1,24 @@
+﻿SW-02
+
+
+________________
+
+
+
+
+* Hostname [ hostname SW-02]
+* Banner [banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS"]
+* Criar usuário local [username lukasrocha privilege 15 secret kakaroto123]
+* Senha da Enable [enable secret LUKAS*enable]
+* Senha da Console [password LUKAS*console]
+* Domínio [ip domain-name 1rede.local]
+* Chave de Criptografia [crypto key generate rsa general-key modulus 1024]
+* Senha da VTY [password LUKAS*vty]
+* Ativar login local na Console [login local]
+* Ativar login local na VTY [login local]
+* Encriptar todas as senhas [service password-encryption]
+* VLAN1 CONFIGURAR
+   * IP: 172.16.255.254
+   * MÁSCARA: 255.255.0.0
+   * IP Default Gateway 172.16.0.1 255.255.0.0
+   * No Shut Down

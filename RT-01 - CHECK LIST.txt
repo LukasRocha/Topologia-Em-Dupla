@@ -1,0 +1,28 @@
+﻿RT-01
+
+
+________________
+
+
+
+
+* Hostname [ hostname RT-01]
+* Banner [banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS"]
+* Criar usuário local [username lukasrocha privilege 15 secret kakaroto123]
+* Senha da Enable [enable secret LUKAS*enable]
+* Senha da Console [password LUKAS*console]
+* Domínio [ip domain-name 1rede.local]
+* Chave de Criptografia [crypto key generate rsa general-key modulus 1024]
+* Senha da VTY [password LUKAS*vty]
+* Ativar login local na Console [login local]
+* Ativar login local na VTY [login local]
+* Encriptar todas as senhas [service password-encryption]
+* INTERFACE G0/0- G0/1 CONFIGURAR
+* INTERFACE g0/0
+   * IP: 192.168.0.1
+   * MÁSCARA: 255.255.255.0
+   * No Shut Down
+* INTERFACE g0/1
+* IP: 172.16.0.1
+* MÁSCARA: 255.255.0.0
+* No Shut Down
